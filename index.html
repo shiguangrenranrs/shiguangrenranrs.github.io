@@ -22,9 +22,13 @@
             text-align: center;
         }
 
-        .image img {
+        .image>figure {
             width: 100%;
-            height: auto;
+            padding-top: 56.25%;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./images/img-1.png);
+            transition: all 0.5s;
         }
 
         section .puzzle>a {
@@ -50,7 +54,7 @@
             position: relative;
         }
 
-        section.list .puzzle>a {
+        section.list div>a {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -60,10 +64,8 @@
             top: 0;
             left: 0;
             color: #333;
-            font-weight: bold;
-            font-size: 1.5vw;
+            font-size: 12px;
         }
-
         section.list>div>figure {
             width: 100%;
             height: 100%;
@@ -80,7 +82,7 @@
 <body>
     <div class="container">
         <section class="image">
-            <img src="./images/img-2.png" alt="">
+            <figure></figure>
         </section>
         <section class="list">
             <div>
@@ -90,6 +92,7 @@
                 <figure></figure>
             </div>
             <div>
+                <a href="https://blog.luckly-mjw.cn/tool-show/m3u8-downloader/index.html">m3u8-downloader</a>
                 <figure></figure>
             </div>
             <div class="puzzle">
@@ -103,9 +106,10 @@
         </section>
     </div>
     <script>
-        let img = document.querySelector("img");
+        let img = document.querySelector(".image>figure");
+        console.log(img)
         let random = Math.floor(Math.random() * 7 + 1);
-        img.src = "./images/img-" + random + ".png";
+        img.style.backgroundImage = "url(./images/img-"+random+".png)";
     </script>
 </body>
 
