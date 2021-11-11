@@ -1,24 +1,112 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My_Pages</title>
-    <!-- <link rel="stylesheet" href="./css/reset.css"> -->
+    <link rel="stylesheet" href="./css/reset.css">
     <link rel="icon" href="">
     <style>
-        h1{
+        .container {
+            margin: 0 auto;
+            max-width: 1000px;
+        }
+
+        h1 {
             text-align: center;
         }
-        p{
+
+        section p {
             text-align: center;
+        }
+
+        .image img {
+            width: 100%;
+            height: auto;
+        }
+
+        section .puzzle>a {
+            display: block;
+        }
+
+        section.list {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: space-around;
+            padding: 1vw 1vw;
+        }
+
+        section.list div {
+            width: 15vw;
+            height: 15vw;
+            min-width: 48px;
+            min-height: 48px;
+            max-width: 80px;
+            max-height: 80px;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        section.list .puzzle>a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: #333;
+            font-weight: bold;
+            font-size: 1.5vw;
+        }
+
+        section.list>div>figure {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(238, 220, 184);
+            border-radius: 10%;
+        }
+        .bottom{
+            font-size: 12px;
+            color: #999;
         }
     </style>
 </head>
+
 <body>
-    <h1>Hello World</h1>
-    <hr>
-    <p>2021-11-7</p>
+    <div class="container">
+        <section class="image">
+            <img src="./images/img-2.png" alt="">
+        </section>
+        <section class="list">
+            <div>
+                <figure></figure>
+            </div>
+            <div>
+                <figure></figure>
+            </div>
+            <div>
+                <figure></figure>
+            </div>
+            <div class="puzzle">
+                <a href="./puzzle.html"><span>拼图游戏</span></a>
+                <figure></figure>
+            </div>
+        </section>
+        <section class="bottom">
+            <hr>
+            <p>2021-11-11@shiguangrenranrs</p>
+        </section>
+    </div>
+    <script>
+        let img = document.querySelector("img");
+        let random = Math.floor(Math.random() * 7 + 1);
+        img.src = "./images/img-" + random + ".png";
+    </script>
 </body>
+
 </html>
