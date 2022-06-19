@@ -1,5 +1,6 @@
 <template>
   <section class="approx">
+    <p>约分与扩大</p>
     <div class="approx-box">
       <div class="compute-box">
         <div>
@@ -112,18 +113,18 @@ export default {
 
 <style scoped>
 .approx {
-  width: 400px;
   box-sizing: border-box;
   border-radius: 20px;
   border: 1px solid #c3c3c3;
+  /* flex: 1; */
 }
 .approx-box {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-around;
-  height: 200px;
-  padding: 10px;
+  height: 160px;
+  padding: 20px;
 }
 .approx .approx-box>div {
   display: flex;

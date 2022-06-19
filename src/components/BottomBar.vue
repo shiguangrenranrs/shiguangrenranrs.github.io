@@ -9,7 +9,7 @@
     </section>
     <section class="bottom">
       <hr />
-      <p>{{ date }}@shiguangrenranrs</p>
+      <p>{{ updateDate }}@shiguangrenranrs</p>
     </section>
   </div>
 </template>
@@ -17,16 +17,19 @@
 <script>
 export default {
   name: "BottomBar",
+  props:{
+    updateDate:{
+      type:String
+    }
+  },
   data() {
     return {
-      date: "2022-06-18",
     };
   },
 };
 </script>
 
 <style scoped>
-
 .m3u8 button {
   height: 30px;
   width: 100%;

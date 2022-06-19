@@ -149,20 +149,21 @@ export default {
 </script>
 
 <style scoped>
-.container .content {
+.puzzle {
+  border-radius: 5%;
+  border: 1px solid #c3c3c3;
+  /* flex: 1; */
+}
+
+.puzzle .content {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.puzzle {
-  border-radius: 5%;
-  border: 1px solid #c3c3c3;
-}
 .puzzle .title p {
-  font-size: 14px;
+  font-size: 12px;
   text-align: center;
-  color: #5e4c42;
-  margin: 0;
+  color: #888;
 }
 
 #main {
